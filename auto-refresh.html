@@ -1,0 +1,30 @@
+
+<!DOCTYPE HTML>
+<head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		setInterval(function(){
+		$("#аutodata").load("lek3.php");
+		refresh();
+		},10000);
+	});
+	function refresh()
+	{
+		setTimeout( function(){
+			$("#autodata").fadeOut("slow").load("lek3.php").fadeIn("slow");
+			refresh();
+			},200);
+			}
+</script>
+
+</head>
+<body>
+<center>
+<div id="autodata"></div>
+</center>
+</body>
+</html>
